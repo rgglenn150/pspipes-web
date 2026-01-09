@@ -81,7 +81,7 @@ export default function Hero() {
           {/* Main Image with Glow Effect */}
           <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-500 group-hover:shadow-rose-500/20 group-hover:border-white/20">
             <Image
-              src="/motoclub-app.png"
+              src="/images/hero/hero.webp"
               alt="Custom Mobile App - Motoclub Connect"
               width={600}
               height={800}
