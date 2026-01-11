@@ -42,7 +42,7 @@ export default function Hero() {
               <div className="text-sm text-slate-400">Average MVP</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">98%</div>
+              <div className="text-3xl font-bold text-white">99%</div>
               <div className="text-sm text-slate-400">Client Satisfaction</div>
             </div>
           </div>
@@ -50,17 +50,17 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="mailto:hello@pspipes.dev"
+              href="mailto:officialpspipes@gmail.com"
               className="px-8 py-4 bg-rose-600 text-white rounded-full font-semibold hover:bg-rose-500 hover:shadow-lg hover:shadow-rose-500/20 transition-all duration-300 text-center"
             >
               Start Your Project
             </a>
-            <a
+            {/* <a
               href="#work"
               className="px-8 py-4 border-2 border-white/20 text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/40 transition-all duration-300 text-center backdrop-blur-sm"
             >
               View Case Studies
-            </a>
+            </a> */}
           </div>
 
           {/* Technology Badges */}
