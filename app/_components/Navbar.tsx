@@ -1,11 +1,21 @@
-export default function Navbar() {
+import Link from "next/link";
+import { getAllCategories } from "@/lib/sanity/client";
+import BlogDropdown from "./BlogDropdown";
+
+export default async function Navbar() {
+  const categories = await getAllCategories();
+
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <span className="font-bold tracking-tighter text-xl text-white">PSPIPES<span className="text-rose-500">.</span></span>
-        <div className="space-x-8 text-sm font-medium text-slate-400">
-          <a href="#work" className="hover:text-white transition-colors">Work</a>
-          <a href="#blog" className="hover:text-white transition-colors">Blog</a>
+        <Link href="/" className="font-bold tracking-tighter text-xl text-white hover:opacity-80 transition-opacity">
+          PSPIPES<span className="text-rose-500">.</span>
+        </Link>
+        <div className="flex items-center gap-8 text-sm font-medium text-slate-400">
+          <Link href="/coming-soon" className="hover:text-white transition-colors">
+            Work
+          </Link>
+          <BlogDropdown categories={categories} />
           <a href="https://moto.pspipes.net" className="px-4 py-2 bg-rose-600 text-white rounded-full hover:bg-rose-500 transition-all">Launch Moto App</a>
         </div>
       </div>

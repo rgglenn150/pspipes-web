@@ -8,7 +8,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pspipes.net'),
-  title: "pspipes | Software Engineer & Moto Enthusiast",
+  title: "pspipes | Software Engineer | Tech Enthusiast | Traveler",
   description: "Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect.",
   openGraph: {
     images: ['/og-image.jpg'], // You'll add this later for SEO
