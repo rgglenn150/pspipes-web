@@ -17,6 +17,8 @@ export async function generateStaticParams() {
   }));
 }
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export async function generateMetadata({ params }: PageProps) {
   const { category } = await params;
   const categories = await getAllCategories();

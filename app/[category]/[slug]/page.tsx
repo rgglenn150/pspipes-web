@@ -19,6 +19,8 @@ export async function generateStaticParams() {
   }));
 }
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export async function generateMetadata({ params }: PageProps) {
   const { category, slug } = await params;
   const post = await getPost(category, slug);
@@ -32,9 +34,17 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: post.title,
     description: post.excerpt || "",
+    alternates: {
+      canonical: `https://pspipes.net/${category}/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt || "",
+      url: `https://pspipes.net/${category}/${slug}`,
+      siteName: "pspipes.net",
+      type: "article",
+      publishedTime: post.publishedAt,
+      authors: ["Patrick Pipes"],
       images: post.mainImage
         ? [urlFor(post.mainImage).width(1200).height(630).url()]
         : [],

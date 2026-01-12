@@ -3,6 +3,8 @@ import Image from "next/image";
 import { getAllPosts, getAllCategories } from "@/lib/sanity/client";
 import { urlFor } from "@/lib/sanity/image";
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export default async function BlogPage() {
   const [posts, categories] = await Promise.all([
     getAllPosts(),
