@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllCategories } from "@/lib/sanity/client";
 import BlogDropdown from "./BlogDropdown";
 
@@ -8,7 +9,14 @@ export default async function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="font-bold tracking-tighter text-xl text-white hover:opacity-80 transition-opacity">
+        <Link href="/" className="flex items-center gap-3 font-bold tracking-tighter text-xl text-white hover:opacity-80 transition-opacity">
+          <Image
+            src="/images/branding/logo-192x192.png"
+            alt="PSPIPES"
+            width={32}
+            height={32}
+            className="rounded-lg"
+          />
           PSPIPES<span className="text-rose-500">.</span>
         </Link>
         <div className="flex items-center gap-8 text-sm font-medium text-slate-400">
