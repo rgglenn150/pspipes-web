@@ -35,6 +35,24 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${currentCategory.title} - Blog`,
     description: `Posts in ${currentCategory.title} category`,
+    alternates: {
+      canonical: `https://pspipes.net/blog/${category}`,
+    },
+    openGraph: {
+      title: `${currentCategory.title} - Blog`,
+      description: `Posts in ${currentCategory.title} category`,
+      url: `https://pspipes.net/blog/${category}`,
+      siteName: 'pspipes',
+      images: ['/og-image.jpg'],
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${currentCategory.title} - Blog`,
+      description: `Posts in ${currentCategory.title} category`,
+      images: ['/og-image.jpg'],
+    },
   };
 }
 

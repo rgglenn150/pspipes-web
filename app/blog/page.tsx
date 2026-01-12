@@ -2,8 +2,32 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts, getAllCategories } from "@/lib/sanity/client";
 import { urlFor } from "@/lib/sanity/image";
+import type { Metadata } from "next";
 
 export const revalidate = 60; // Revalidate every 60 seconds
+
+export const metadata: Metadata = {
+  title: "Blog | pspipes",
+  description: "Tech, motorcycles, travel, food, and everything in between.",
+  alternates: {
+    canonical: 'https://pspipes.net/blog',
+  },
+  openGraph: {
+    title: "Blog | pspipes",
+    description: "Tech, motorcycles, travel, food, and everything in between.",
+    url: 'https://pspipes.net/blog',
+    siteName: 'pspipes',
+    images: ['/og-image.jpg'],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Blog | pspipes",
+    description: "Tech, motorcycles, travel, food, and everything in between.",
+    images: ['/og-image.jpg'],
+  },
+};
 
 export default async function BlogPage() {
   const [posts, categories] = await Promise.all([
