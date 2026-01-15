@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://pspipes.net'),
   title: "pspipes | Software Engineer | Tech Enthusiast | Traveler",
   description: "Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect.",
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     images: ['/og-image.jpg'], // You'll add this later for SEO
   },
