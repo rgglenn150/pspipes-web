@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/admin"],
     },
-    sitemap: "https://pspipes.net/sitemap.xml",
+    sitemap: "https://www.pspipes.net/sitemap.xml",
   };
 }

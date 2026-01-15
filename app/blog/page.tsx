@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Blog | pspipes",
   description: "Tech, motorcycles, travel, food, and everything in between.",
   alternates: {
-    canonical: 'https://pspipes.net/blog',
+    canonical: 'https://www.pspipes.net/blog',
   },
   openGraph: {
     title: "Blog | pspipes",
     description: "Tech, motorcycles, travel, food, and everything in between.",
-    url: 'https://pspipes.net/blog',
+    url: 'https://www.pspipes.net/blog',
     siteName: 'pspipes',
     images: ['/og-image.jpg'],
     locale: 'en_US',

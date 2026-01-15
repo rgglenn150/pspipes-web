@@ -36,12 +36,12 @@ export async function generateMetadata({ params }: PageProps) {
     title: `${currentCategory.title} - Blog`,
     description: `Posts in ${currentCategory.title} category`,
     alternates: {
-      canonical: `https://pspipes.net/blog/${category}`,
+      canonical: `https://www.pspipes.net/blog/${category}`,
     },
     openGraph: {
       title: `${currentCategory.title} - Blog`,
       description: `Posts in ${currentCategory.title} category`,
-      url: `https://pspipes.net/blog/${category}`,
+      url: `https://www.pspipes.net/blog/${category}`,
       siteName: 'pspipes',
       images: ['/og-image.jpg'],
       locale: 'en_US',

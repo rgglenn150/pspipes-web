@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "PSPIPES | Software Engineer | Tech Enthusiast | Traveler",
   description: "Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect.",
   alternates: {
-    canonical: 'https://pspipes.net',
+    canonical: 'https://www.pspipes.net',
   },
   openGraph: {
     title: "pspipes | Software Engineer | Tech Enthusiast | Traveler",
     description: "Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect.",
-    url: 'https://pspipes.net',
+    url: 'https://www.pspipes.net',
     siteName: 'pspipes',
     images: ['/og-image.jpg'],
     locale: 'en_US',
