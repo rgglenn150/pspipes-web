@@ -60,8 +60,38 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt || '',
+    url: `https://pspipes.net/${category}/${slug}`,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      '@type': 'Person',
+      name: 'Patrick Pipes',
+      url: 'https://pspipes.net',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'PSPIPES',
+      url: 'https://pspipes.net',
+    },
+    image: post.mainImage ? urlFor(post.mainImage).width(1200).height(630).url() : undefined,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://pspipes.net/${category}/${slug}`,
+    },
+  };
+
   return (
-    <article className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <article className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm">
@@ -162,5 +192,6 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       </div>
     </article>
+    </>
   );
 }
