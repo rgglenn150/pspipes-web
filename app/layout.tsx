@@ -18,9 +18,33 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'PSPIPES',
+  url: 'https://pspipes.net',
+  description: 'Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect.',
+  author: {
+    '@type': 'Person',
+    name: 'Patrick Pipes',
+    url: 'https://pspipes.net',
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://pspipes.net/blog?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${geistSans.variable} font-sans antialiased bg-[#0a0a0a] text-slate-200`}>
         <Navbar />
         <main className="pt-16">{children}</main>
