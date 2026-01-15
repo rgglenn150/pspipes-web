@@ -35,12 +35,12 @@ export async function generateMetadata({ params }: PageProps) {
     title: post.title,
     description: post.excerpt || "",
     alternates: {
-      canonical: `https://pspipes.net/${category}/${slug}`,
+      canonical: `https://www.pspipes.net/${category}/${slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt || "",
-      url: `https://pspipes.net/${category}/${slug}`,
+      url: `https://www.pspipes.net/${category}/${slug}`,
       siteName: "pspipes.net",
       type: "article",
       publishedTime: post.publishedAt,
@@ -65,23 +65,23 @@ export default async function BlogPostPage({ params }: PageProps) {
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt || '',
-    url: `https://pspipes.net/${category}/${slug}`,
+    url: `https://www.pspipes.net/${category}/${slug}`,
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
     author: {
       '@type': 'Person',
       name: 'Patrick Pipes',
-      url: 'https://pspipes.net',
+      url: 'https://www.pspipes.net',
     },
     publisher: {
       '@type': 'Organization',
       name: 'PSPIPES',
-      url: 'https://pspipes.net',
+      url: 'https://www.pspipes.net',
     },
     image: post.mainImage ? urlFor(post.mainImage).width(1200).height(630).url() : undefined,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://pspipes.net/${category}/${slug}`,
+      '@id': `https://www.pspipes.net/${category}/${slug}`,
     },
   };
 

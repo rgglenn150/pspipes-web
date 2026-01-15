@@ -7,7 +7,7 @@ import Footer from "./_components/Footer";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://pspipes.net'),
+  metadataBase: new URL('https://www.pspipes.net'),
   title: "pspipes | Software Engineer | Tech Enthusiast | Traveler",
   description: "Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect.",
   alternates: {
@@ -22,16 +22,16 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'PSPIPES',
-  url: 'https://pspipes.net',
+  url: 'https://www.pspipes.net',
   description: 'Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect.',
   author: {
     '@type': 'Person',
     name: 'Patrick Pipes',
-    url: 'https://pspipes.net',
+    url: 'https://www.pspipes.net',
   },
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://pspipes.net/blog?q={search_term_string}',
+    target: 'https://www.pspipes.net/blog?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };

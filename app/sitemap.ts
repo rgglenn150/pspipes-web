@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPosts, getAllCategories } from "@/lib/sanity/client";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://pspipes.net";
+  const baseUrl = "https://www.pspipes.net";
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
