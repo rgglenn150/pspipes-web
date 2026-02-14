@@ -59,8 +59,11 @@ export default async function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-white/5 text-center text-slate-500 text-xs">
-          © {new Date().getFullYear()} PSPIPES. All rights reserved.
+        <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2 text-slate-500 text-xs">
+          <span>© {new Date().getFullYear()} PSPIPES. All rights reserved.</span>
+          <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>
