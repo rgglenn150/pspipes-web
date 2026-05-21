@@ -14,16 +14,11 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'cdn.sanity.io',
       },
-    ],
-  },
-
-  async rewrites() {
-    return [
       {
-        source: '/sona-admin-dashboard/:path*',
-        destination: 'http://localhost:9119/:path*',
+        protocol: 'https',
+        hostname: 'pspipes.net',
       },
-    ];
+    ],
   },
 };
 
