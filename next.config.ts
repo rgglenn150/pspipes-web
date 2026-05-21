@@ -16,6 +16,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/sona-admin-dashboard/:path*',
+        destination: 'http://localhost:9119/:path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
