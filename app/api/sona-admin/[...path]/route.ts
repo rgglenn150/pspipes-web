@@ -2,9 +2,9 @@ import { NextRequest } from 'next/server';
 
 const HERMES_API_BASE = 'http://localhost:8642/v1';
 
-export async function GET(request: NextRequest, { params }: { params: { path: string[] } }) {
-  const path = params.path.join('/');
-  const url = `${HERMES_API_BASE}/${path}`;
+export async function GET(request: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
+  const { path } = await params;
+  const url = `${HERMES_API_BASE}/${path.join('/')}`;
 
   const response = await fetch(url, {
     headers: {
@@ -16,9 +16,9 @@ export async function GET(request: NextRequest, { params }: { params: { path: st
   return Response.json(data, { status: response.status });
 }
 
-export async function POST(request: NextRequest, { params }: { params: { path: string[] } }) {
-  const path = params.path.join('/');
-  const url = `${HERMES_API_BASE}/${path}`;
+export async function POST(request: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
+  const { path } = await params;
+  const url = `${HERMES_API_BASE}/${path.join('/')}`;
   const body = await request.json();
 
   const response = await fetch(url, {
@@ -33,9 +33,9 @@ export async function POST(request: NextRequest, { params }: { params: { path: s
   return Response.json(data, { status: response.status });
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { path: string[] } }) {
-  const path = params.path.join('/');
-  const url = `${HERMES_API_BASE}/${path}`;
+export async function DELETE(request: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
+  const { path } = await params;
+  const url = `${HERMES_API_BASE}/${path.join('/')}`;
 
   const response = await fetch(url, {
     method: 'DELETE',
