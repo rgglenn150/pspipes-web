@@ -4,25 +4,10 @@ import AboutSection from './components/AboutSection';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PSPIPES | Software Engineer | Tech Enthusiast | Traveler",
-  description: "Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect and BadgeHero.",
+  title: "Ruben Glenn Madredano | Senior Software Engineer",
+  description: "Senior Full Stack Engineer with 10+ years of experience. Creator of MotoClub Connect and BadgeHero. Expert in Node.js, Angular, Next.js, and Ionic.",
   alternates: {
     canonical: 'https://www.pspipes.net',
-  },
-  openGraph: {
-    title: "pspipes | Software Engineer | Tech Enthusiast | Traveler",
-    description: "Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect and BadgeHero.",
-    url: 'https://www.pspipes.net',
-    siteName: 'pspipes',
-    images: ['/og-image.jpg'],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "pspipes | Software Engineer | Tech Enthusiast | Traveler",
-    description: "Senior Software Engineer specializing in Node.js, Angular, and Next.js. Creator of MotoClub Connect and BadgeHero.",
-    images: ['/og-image.jpg'],
   },
 };
 
