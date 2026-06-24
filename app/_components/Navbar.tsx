@@ -20,9 +20,8 @@ export default async function Navbar() {
           PSPIPES<span className="text-rose-500">.</span>
         </Link>
         <div className="flex items-center gap-8 text-sm font-medium text-slate-400">
-          <a href="/#work" className="hover:text-white transition-colors">
-            Work
-          </a>
+          <a href="/#work" className="hover:text-white transition-colors">Work</a>
+          <a href="/#about" className="hover:text-white transition-colors">About</a>
           <BlogDropdown categories={categories} />
           <a href="mailto:officialpspipes@gmail.com" className="px-4 py-2 bg-rose-600 text-white rounded-full hover:bg-rose-500 transition-all">Start a Project</a>
         </div>
