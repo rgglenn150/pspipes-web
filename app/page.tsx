@@ -1,5 +1,6 @@
 import Hero from './components/Hero';
 import ProjectsSection from './components/ProjectsSection';
+import AboutSection from './components/AboutSection';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <ProjectsSection />
+      <AboutSection />
     </div>
   );
 }
