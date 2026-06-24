@@ -20,11 +20,11 @@ export default async function Navbar() {
           PSPIPES<span className="text-rose-500">.</span>
         </Link>
         <div className="flex items-center gap-8 text-sm font-medium text-slate-400">
-          <Link href="/coming-soon" className="hover:text-white transition-colors">
+          <a href="/#work" className="hover:text-white transition-colors">
             Work
-          </Link>
+          </a>
           <BlogDropdown categories={categories} />
-          <a href="https://moto.pspipes.net" className="px-4 py-2 bg-rose-600 text-white rounded-full hover:bg-rose-500 transition-all">Launch Moto App</a>
+          <a href="mailto:officialpspipes@gmail.com" className="px-4 py-2 bg-rose-600 text-white rounded-full hover:bg-rose-500 transition-all">Start a Project</a>
         </div>
       </div>
     </nav>
